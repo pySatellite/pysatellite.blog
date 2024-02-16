@@ -9,6 +9,7 @@ RUN rm -rf /var/www/html
 RUN git clone https://github.com/pySatellite/pysatellite.blog.git /var/www/html
 
 COPY pull.sh /var/www/html
+
 COPY blog-pull-cronjob /etc/cron.d/
 RUN crontab /etc/cron.d/blog-pull-cronjob
 

@@ -3,7 +3,7 @@
 echo "start pull-->"
 date "+%Y-%m-%d %H:%M:%S"
 
-cd /home/nori/code/pysatellite.blog
+cd /var/www/html
 git pull
 
 echo "<--end pull"

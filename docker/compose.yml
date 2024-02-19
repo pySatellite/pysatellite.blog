@@ -20,7 +20,7 @@ services:
 
   blog:
     # build: ../../docker_file/httpd
-    image: pysatellite/blog-becky
+    image: pysatellite/blog-tomsawyer
     deploy:
       mode: replicated
       replicas: 1 # https://docs.docker.com/compose/compose-file/deploy/#replicas

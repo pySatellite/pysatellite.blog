@@ -55,6 +55,36 @@ d101c9453715: Layer already exists
 latest: digest: sha256:34db1d823f17e4d6344f557598bfd0e36e740a9147f7c418ec2ad7a231161539 size: 2414
 
 # compose RUN
-$ docker compose -f docker/compose.yml  up -d --build --force-recreate
-```
+# https://docs.docker.com/engine/reference/commandline/compose_up/
 
+$ docker compose -f docker/compose.yml  up -d --build --force-recreate
+$ sudo docker compose -f docker/compose.yml  up -d
+[+] Running 14/14
+ ✔ nginx-proxy 13 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                               4.8s
+   ✔ e1caac4eb9d2 Already exists                                                              0.0s
+   ✔ 88f6f236f401 Already exists                                                              0.0s
+   ✔ c3ea3344e711 Already exists                                                              0.0s
+   ✔ cc1bb4345a3a Already exists                                                              0.0s
+   ✔ da8fa4352481 Already exists                                                              0.0s
+   ✔ c7f80e9cdab2 Already exists                                                              0.0s
+   ✔ 18a869624cb6 Already exists                                                              0.0s
+   ✔ 66ab28d11695 Pull complete                                                               0.7s
+   ✔ 79b57e45edb0 Pull complete                                                               1.0s
+   ✔ 2be787a40ace Pull complete                                                               0.9s
+   ✔ 563a441cec03 Pull complete                                                               1.3s
+   ✔ 4994460aae36 Pull complete                                                               1.5s
+   ✔ 4f4fb700ef54 Pull complete                                                               1.6s
+[+] Running 2/3
+ ⠴ Network awsgoo_default          Created                                                    1.5s
+ ✔ Container awsgoo-blog-1         Started                                                    0.9s
+ ✔ Container awsgoo-nginx-proxy-1  Started                                                    1.2s
+$ sudo docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+4448a4bb4063   nginxproxy/nginx-proxy   "/app/docker-entrypo…"   27 seconds ago   Up 26 seconds   0.0.0.0:9889->80/tcp, :::9889->80/tcp   awsgoo-nginx-proxy-1
+029e4c3cd450   pysatellite/blog-becky   "/bin/sh -c 'service…"   27 seconds ago   Up 26 seconds   80/tcp                                  awsgoo-blog-1
+$ sudo docker images
+REPOSITORY                   TAG       IMAGE ID       CREATED          SIZE
+pysatellite/blog-tomsawyer   latest    5ad307b8bad2   9 minutes ago    259MB
+pysatellite/blog-becky       latest    340d5c2c811d   10 minutes ago   259MB
+nginxproxy/nginx-proxy       latest    1a3960925c12   3 hours ago      204MB
+```

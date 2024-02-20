@@ -1,9 +1,0 @@
-
-19_Feb_2024_15_05_16:
-CONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O   PIDS
-a88bd5bd96fc   awsgoo-blog-3          0.00%     8.66MiB / 70MiB     12.37%    110kB / 49.5kB   0B / 0B     11
-6a5c0453e047   awsgoo-nginx-proxy-1   0.21%     25.36MiB / 50MiB    50.73%    1.12kB / 0B      0B / 0B     31
-84e13216aabe   awsgoo-blog-1          0.00%     8.672MiB / 70MiB    12.39%    116kB / 51.5kB   0B / 0B     11
-e3c9c4621aff   awsgoo-blog-2          0.00%     8.652MiB / 70MiB    12.36%    116kB / 52.7kB   0B / 0B     11
-
-19_Feb_2024_15_05_21:

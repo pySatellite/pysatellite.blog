@@ -34,10 +34,10 @@ services:
     expose:
       - "80"
     environment:
-      - VIRTUAL_HOST=aws.google.com
+      - VIRTUAL_HOST=aws.google.com, tomsawywer.google.com
       - VIRTUAL_PORT=80
 
-blog_b:
+  blog_b:
     build: blog-b/
     deploy:
       mode: replicated

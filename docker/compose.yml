@@ -12,10 +12,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.10'
+          cpus: '0.02'
           memory: 50M
         reservations:
-          cpus: '0.05'
+          cpus: '0.01'
           memory: 20M
 
   blog:
@@ -23,14 +23,14 @@ services:
     image: pysatellite/blog-tomsawyer
     deploy:
       mode: replicated
-      replicas: 1 # https://docs.docker.com/compose/compose-file/deploy/#replicas
+      replicas: 2 # https://docs.docker.com/compose/compose-file/deploy/#replicas
       resources: # https://docs.docker.com/compose/compose-file/compose-file-v3/#resources
         limits:
-          cpus: '0.05'
-          memory: 50M
+          cpus: '0.02'
+          memory: 30M
         reservations:
           cpus: '0.01'
-          memory: 20M
+          memory: 10M
     expose:
       - "80"
     environment:

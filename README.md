@@ -88,3 +88,19 @@ pysatellite/blog-tomsawyer   latest    5ad307b8bad2   9 minutes ago    259MB
 pysatellite/blog-becky       latest    340d5c2c811d   10 minutes ago   259MB
 nginxproxy/nginx-proxy       latest    1a3960925c12   3 hours ago      204MB
 ```
+
+# scale out/in
+```
+$ docker compose -f docker/compose.yml  up -d --scale blog=5
+```
+
+# compose down -> stop & remove
+```
+$ docker compose -f docker/compose.yml down
+```
+
+# manual script
+```
+$ chmod +x manual-compose.sh
+$ ./manual-compose.sh
+```

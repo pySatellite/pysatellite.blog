@@ -19,3 +19,5 @@
 ### 240219.1
 - [ ] auto LB by compose
 
+### 240220.1
+- [ ] manual LB

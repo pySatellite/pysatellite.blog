@@ -98,3 +98,9 @@ $ docker compose -f docker/compose.yml  up -d --scale blog=5
 ```
 $ docker compose -f docker/compose.yml down
 ```
+
+# manual script
+```
+$ chmod +x manual-compose.sh
+$ ./manual-compose.sh
+```
